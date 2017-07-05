@@ -1,8 +1,11 @@
 @font-color: #333;
 @main-color: #ff7676;
 @logo-size: 45px;
+@logo-letter-spacing: -7px;
+@body-min-width: 1200px;
 
 body {
+  min-width: @body-min-width;
   color: @font-color;
 }
 
@@ -12,8 +15,13 @@ ul {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
 header {
   position: relative;
+  min-width: @body-min-width;
   width: 100%;
   height: 80px;
   background-color: #fff;
@@ -27,6 +35,7 @@ header {
   color: @main-color;
   font-size: @logo-size;
   font-weight: bold;
+  letter-spacing: @logo-letter-spacing;
   cursor: pointer;
 }
 
@@ -44,10 +53,8 @@ header {
   cursor: pointer;
 }
 
-button {
-  margin: 0;
-  padding: 0;
-  outline: 0;
+.header-search-icon:hover {
+  color: #999;
 }
 
 .header-bt {
@@ -55,13 +62,10 @@ button {
   height: 40px;
   border: solid 1px gray;
   border-radius: 20px;
+  outline: 0;
   color: #353744;
   font-size: 18px;
-  font-weight: 300;
   text-align: center;
-  text-shadow: none;
-  text-transform: none;
-  line-height: 36px;
   background-color: transparent;
   vertical-align: bottom;
 }
@@ -72,16 +76,16 @@ button {
 
 .main-contents {
   width: 100%;
-  height: 50px;
   background-color: @main-color;
 }
 
 @footer-bg-color: #434656;
 
 footer {
-  position: relative;
+  display: inline-block;
+  min-width: @body-min-width;
   width: 100%;
-  height: 500px;
+  padding: 10px 100px 100px 100px;
   background-color: @footer-bg-color;
   color: #fff;
 }
@@ -96,6 +100,7 @@ footer {
   padding-top: 20px;
   font-size: @logo-size;
   font-weight: bold;
+  letter-spacing: @logo-letter-spacing;
 }
 
 .footer-sns-icon > li {
@@ -134,34 +139,46 @@ footer {
 
 .select-box {
   padding-top: 50px;
-  color: #333;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.icon-lang {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.name-lang {
+  width: auto;
+  margin-right: 20px;
+}
+
+.name-lang:hover {
+  color: #999;
+}
+
+.select-lang {
+  font-size: 14px;
 }
 
 .footer-right-box {
   padding: 80px;
   float: right;
-  text-align: right;
 }
 
-.app-icon {
-  padding-left: 30px;
-  font-size: 25px;
-  float: left;
-}
+@badge-height: 54px;
 
-.google-app {
-  width: 200px;
-  height: 54px;
+.google-badge {
+  height: @badge-height;
   margin-bottom: 20px;
-  padding: 10px;
-  background-color: #353743;
   cursor: pointer;
 }
 
-.apple-app {
-  width: 200px;
-  height: 54px;
-  padding: 10px;
-  background-color: #353743;
+.apple-badge {
+  height: @badge-height;
   cursor: pointer;
 }
