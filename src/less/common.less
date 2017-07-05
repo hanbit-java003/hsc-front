@@ -1,5 +1,6 @@
 @font-color: #333;
 @main-color: #ff7676;
+@logo-size: 45px;
 
 body {
   color: @font-color;
@@ -11,29 +12,156 @@ ul {
   padding: 0;
 }
 
-.header-container {
+header {
   position: relative;
   width: 100%;
   height: 80px;
   background-color: #fff;
-  border: solid 1px gray;
 }
 
 .header-logo {
   position: absolute;
   top: 0px;
   left: 0px;
-  padding: 20px 100px;
+  padding: 20px 60px;
   color: @main-color;
+  font-size: @logo-size;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header-search-box {
+  float: right;
+  padding: 30px 60px;
+}
+
+.header-search-icon {
+  display: inline-block;
+  padding-right: 30px;
+  color: #333;
   font-size: 26px;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.header-bt {
+  width: 140px;
+  height: 40px;
+  border: solid 1px gray;
+  border-radius: 20px;
+  color: #353744;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: none;
+  text-transform: none;
+  line-height: 36px;
+  background-color: transparent;
+  vertical-align: bottom;
+}
+
+.header-bt:hover {
+  color: #999;
+}
+
+.main-contents {
+  width: 100%;
+  height: 50px;
+  background-color: @main-color;
+}
+
+@footer-bg-color: #434656;
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: @footer-bg-color;
+  color: #fff;
+}
+
+.footer-left-box {
+  width: 618px;
+  float: left;
+  padding: 20px 60px;
+}
+
+.footer-logo {
+  padding-top: 20px;
+  font-size: @logo-size;
   font-weight: bold;
 }
 
-.header-search {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  padding: 20px 300px;
-  color: #333;
+.footer-sns-icon > li {
+  display: inline-block;
+  padding-top: 30px;
+  padding-right: 40px;
   font-size: 26px;
+  cursor: pointer;
+}
+
+.footer-info {
+  padding-top: 40px;
+  line-height: 1.4;
+  opacity: 0.5;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.footer-info > span {
+  cursor: pointer;
+}
+
+.footer-center-box {
+  padding-top: 90px;
+  padding-left: 40px;
+  float: left;
+}
+
+.footer-notice > li {
+  padding-bottom: 15px;
+  opacity: 0.6;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.select-box {
+  padding-top: 50px;
+  color: #333;
+}
+
+.footer-right-box {
+  padding: 80px;
+  float: right;
+  text-align: right;
+}
+
+.app-icon {
+  padding-left: 30px;
+  font-size: 25px;
+  float: left;
+}
+
+.google-app {
+  width: 200px;
+  height: 54px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #353743;
+  cursor: pointer;
+}
+
+.apple-app {
+  width: 200px;
+  height: 54px;
+  padding: 10px;
+  background-color: #353743;
+  cursor: pointer;
 }
