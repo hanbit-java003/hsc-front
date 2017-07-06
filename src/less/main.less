@@ -6,7 +6,7 @@
 }
 
 .main-top {
-  margin: 100px 100px 30px 100px;
+  margin: 100px 100px 20px 100px;
 }
 
 .main-text {
@@ -87,6 +87,7 @@
   min-width: @body-min-width;
   width: 100%;
   height: 300px;
+  margin: 20px 0px 20px 0px;
   background-color: #f2f9fb;
   text-align: center;
 }
@@ -135,7 +136,7 @@
   display: inline-block;
   min-width: @body-min-width;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 20px;
   text-align: center;
 }
 
@@ -148,7 +149,12 @@
   letter-spacing: -1px;
 }
 
-.main-section-review > li:first-child {
+.section-review-text {
+  display: inline-block;
+  width: 280px;
+  height: 400px;
+  text-align: left;
+  letter-spacing: -1px;
   border-top: solid 1px #333;
 
   .contents-country {
@@ -170,6 +176,7 @@
   }
 
   .contents-more {
+    display: inline-block;
     margin-top: 100px;
     color: @main-color;
     font-size: 16px;
@@ -243,10 +250,93 @@
   font-weight: bold;
 }
 
+.main-bottom {
+  min-width: @body-min-width;
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+  text-align: center;
+}
 
+.bottom-writer {
+  display: inline-block;
+  padding: 50px 60px 0px 60px;
+  border-top: solid 1px #333;
+}
 
+.bottom-writer-text {
+  font-size: 28px;
+  line-height: 100px;
+  float: left;
+}
 
+.bottom-writer-text > span {
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: @main-color;
+  border-bottom: solid 2px @main-color;
+}
 
+.bottom-writer-img {
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.bottom-user {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.bottom-prev, .bottom-next, .user-info {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bottom-prev, .bottom-next {
+  font-size: 100px;
+  position: absolute;
+}
+
+.bottom-prev {
+  top: 50px;
+  left: 100px;
+}
+
+.bottom-next {
+  top: 50px;
+  right: 100px;
+}
+
+.user-info {
+  margin: 0px 40px 40px 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.user-img {
+  width: 130px;
+  height: 130px;
+  background-size: cover;
+  border-radius: 65px;
+}
+
+.user-id {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.user-text {
+  width: 130px;
+  font-size: 15px;
+  color: #666;
+  padding-bottom: 10px;
+}
+
+.user-travel {
+  padding-top: 10px;
+  border-top: solid 1px #ddd;
+}
 
 
 
