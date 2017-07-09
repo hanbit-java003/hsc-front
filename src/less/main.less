@@ -1,25 +1,26 @@
 @import 'common.less';
 
 .main-intro {
-  min-width: 1200px;
+  padding: 100px 180px 20px 180px;
+  min-width: @body-min-width;
   width: 100%;
 }
 
-.main-top {
-  padding: 100px 180px 20px 180px;
+.main-intro-top {
+  height: 454px;
 }
 
 .main-text {
   position: relative;
   display: inline-block;
   width: 50%;
+  padding-left: 200px;
   float: left;
 }
 
 .text-title {
   height: 240px;
-  padding-top: 109px;
-  padding-left: 70px;
+  padding-top: 90px;
   font-weight: 500;
   font-size: 50px;
   color: #000;
@@ -27,19 +28,17 @@
 
 .text-yolo {
   position: absolute;
-  top: 180px;
-  left: 320px;
+  top: 150px;
+  left: 500px;
   font-weight: bold;
   text-align: right;
 }
 
 .text-msg {
   display: inline-block;
-  padding-top: 20px;
-  padding-left: 80px;
+  padding-top: 10px;
   font-size: 16px;
   font-weight: bold;
-  float: left;
   line-height: 1.7;
 }
 
@@ -131,6 +130,7 @@
 .country > li {
   padding-left: 15px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 .main-contents {
@@ -317,6 +317,7 @@
   font-weight: bold;
   text-align: center;
   float: left;
+  cursor: pointer;
 }
 
 .user-img {
@@ -342,4 +343,3 @@
   padding-top: 10px;
   border-top: solid 1px #ddd;
 }
-
