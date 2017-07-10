@@ -4,5 +4,13 @@
     </div>
     <div class="user-id">{{id}}</div>
     <div class="user-text">{{text}}</div>
-    <div class="user-travel">{{travel}}</div>
+    <ul class="user-travel">
+        {{#each subMenus}}
+            <li class="user-travel-icon"
+                style="background-image: url({{name}})"></li>
+        {{/each}}
+        {{#if more}}
+            <span>+4</span>
+        {{/if}}
+    </ul>
 </div>
