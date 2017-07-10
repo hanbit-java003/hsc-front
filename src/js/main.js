@@ -1,6 +1,8 @@
 require('bootstrap');
 require('../less/main.less');
 
+var common = require('./common');
+
 var country = require('./model/country');
 var contents = require('./model/contents');
 var users = require('./model/userInfo');
