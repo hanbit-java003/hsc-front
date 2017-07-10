@@ -253,6 +253,7 @@
 }
 
 .main-bottom {
+  position: relative;
   min-width: @body-min-width;
   width: 100%;
   margin: 20px 0px 20px 0px;
@@ -354,4 +355,24 @@
   background-size: cover;
   border-radius: 9px;
   vertical-align: bottom;
+}
+
+.go-top-btn {
+  position: fixed;
+  right: 200px;
+  bottom: 20px;
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #666;
+  border-radius: 50px;
+  border: solid 1px #ddd;
+  outline: none;
+  z-index: 5000;
+}
+
+.go-top-btn:hover {
+  color: #fff;
+  background-color: @footer-bg-color;
 }
