@@ -32,16 +32,16 @@ function relocateGoTopButton() {
             bottom: 20
         });
     }
-
-    $('.go-top-btn').click(function () {
-        $('body, html').animate({
-            scrollTop: 0
-        }, 500);
-        return false;
-    });
 }
 
-$(window).on('scroll', function() {
+$('.go-top-btn').on('click', function () {
+    $('body, html').animate({
+        scrollTop: 0
+    }, 100);
+    return false;
+});
+
+$(window).on('scroll', function () {
     relocateGoTopButton();
 });
 relocateGoTopButton();
