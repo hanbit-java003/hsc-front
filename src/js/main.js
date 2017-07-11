@@ -40,8 +40,14 @@ function initUserInfo(users) {
         var html = template(users[i]);
 
         $('.bottom-user').append(html);
+
+
+        $('.user-info').on('click', function () {
+            location.href = './with.html';
+        });
     }
 }
+
 
 initCountry(country);
 initContents(contents);

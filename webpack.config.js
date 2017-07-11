@@ -11,6 +11,9 @@ const pages = [{
     html: 'index',
     script: 'main',
 }, {
+    html: 'with',
+    script: 'with',
+}, {
     html: 'sub',
     script: 'sub',
 }];

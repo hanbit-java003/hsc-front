@@ -34,6 +34,10 @@ function relocateGoTopButton() {
     }
 }
 
+$('.header-logo').on('click', function () {
+    location.href = './';
+});
+
 $('.go-top-btn').on('click', function () {
     $('body, html').animate({
         scrollTop: 0
