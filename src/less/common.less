@@ -2,7 +2,7 @@
 @main-color: #ff7676;
 @logo-size: 45px;
 @logo-letter-spacing: -7px;
-@body-min-width: 1200px;
+@body-min-width: 1220px;
 
 html {
   height: 100%;
@@ -21,6 +21,14 @@ ul {
   padding: 0;
 }
 
+h2, p, li, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
 .dark-layer {
   position: absolute;
   width: 100%;
@@ -35,47 +43,56 @@ ul {
 header {
   position: relative;
   display: inline-block;
+  margin-bottom: 40px;
   min-width: @body-min-width;
   width: 100%;
   height: @header-height;
   background-color: #fff;
 }
 
+.header-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 40px;
+  width: 1220px;
+  height: 40px;
+  box-sizing: content-box;
+  z-index: 101;
+}
+
 .header-logo {
-  position: absolute;
-  top: 30px;
-  left: 180px;
+  display: inline-block;
+  width: 95px;
   color: @main-color;
   font-size: @logo-size;
   font-weight: bold;
   letter-spacing: @logo-letter-spacing;
+  line-height: 0.9;
   cursor: pointer;
 }
 
-.header-search-wrapper {
+.btn-wrapper {
+  position: relative;
   display: inline-block;
+  float: right;
 }
 
 .header-search-bar {
-  position: absolute;
+  float: left;
   display: none;
-  top: 40px;
-  right: 360px;
   color: #333;
   font-size: 26px;
   border-bottom: solid 1px #666;
 }
 
 .header-search-bar > input {
-  width: 840px;
+  width: 850px;
   border: none;
   outline: none;
 }
 
 .header-search-icon {
-  position: absolute;
-  top: 40px;
-  right: 360px;
+  display: inline-block;
   color: #333;
   font-size: 26px;
   cursor: pointer;
@@ -95,19 +112,20 @@ header {
 }
 
 .header-bt {
-  position: absolute;
-  top: 40px;
-  right: 180px;
+  display: inline-block;
   width: 140px;
   height: 40px;
-  border: solid 1px gray;
-  border-radius: 20px;
-  outline: 0;
-  color: #353744;
-  font-size: 18px;
+  float: right;
   text-align: center;
+  margin-left: 35px;
+  font-size: 18px;
+  color: #353744;
   background-color: transparent;
-  vertical-align: bottom;
+  letter-spacing: 0;
+  border: 1px solid #4a4a4a;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
 }
 
 .header-bt:hover {

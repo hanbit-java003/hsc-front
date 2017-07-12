@@ -1,21 +1,24 @@
 @import 'common.less';
 
 .main-intro {
-  padding: 80px 0px 20px 0px;
+  margin: 0 auto;
   min-width: @body-min-width;
   width: 100%;
+  z-index: 100;
 }
 
-.main-intro-top > * {
-  display: inline-block;
-  width: 50%;
+.intro-top {
+  position: relative;
+  width: 1220px;
+  margin: 40px auto 0;
 }
 
 .main-text {
-  position: relative;
-  height: 454px;
-  padding: 130px 0px 0px 200px;
-  vertical-align: top;
+  float: left;
+  width: 50%;
+  padding: 10% 2.733%;
+  background: url(../img/harubang.png) 424px 208px no-repeat;
+  background-size: 132px 139px;
 }
 
 .text-title {
@@ -26,30 +29,32 @@
 }
 
 .text-yolo {
-  font-size: 50px;
-  font-weight: bold;
-  padding-left: 300px;
+  width: 394px;
+  margin-top: 10px;
+  display: inline-block;
+  font-weight: 700;
+  text-align: right;
+}
+
+.text-msg-wrapper {
+  padding-top: 54px;
+  text-align: left;
 }
 
 .text-msg {
-  display: inline-block;
-  padding: 30px 0px 0px 30px;
-  font-size: 16px;
+  float: left;
+  padding-left: 37px;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 15px;
   font-weight: bold;
-  line-height: 1.7;
-}
-
-.text-img-wrapper {
-  position: absolute;
-  bottom: 90px;
-  right: 60px;
-}
-
-.text-img {
-
+  color: #414040;
+  width: 338px;
 }
 
 .main-event {
+  width: 50%;
+  float: right;
   cursor: pointer;
 }
 
@@ -86,7 +91,7 @@
   min-width: @body-min-width;
   width: 100%;
   height: 300px;
-  margin: 20px 0px 20px 0px;
+  margin: 40px 0px 20px 0px;
   background-color: #f2f9fb;
   text-align: center;
 }
