@@ -2,7 +2,7 @@
 
 .with-user-info {
   position: relative;
-  width: 100%;
+  width: @body-min-width;
   margin: 30px auto;
   min-width: @body-min-width;
   border-top: solid 1px #ccc;
@@ -10,7 +10,7 @@
 
 .with-user-profile {
   height: 100%;
-  margin: 0 188px;
+  margin: 0 auto;
   padding: 56px 0 105px;
 }
 
@@ -70,25 +70,31 @@
 }
 
 .with-user-contents {
-  text-align: center;
-  padding-bottom: 30px;
+  width: 100%;
+  padding: 0px 14px 30px 14px;
 }
 
 .with-user-contents > li {
   display: inline-block;
-  margin: 0px 12px;
+  margin-right: 24px;
   width: 280px;
   height: 370px;
   text-align: left;
 }
 
+.with-user-contents > li:nth-child(4n) {
+  margin-right: 0px;
+}
+
 .user-contents-img {
   width: 100%;
   height: 50%;
+  cursor: pointer;
 }
 
 .user-contents-img > img {
   width: 100%;
+  height: 174px;
   background-size: cover;
   background-position: center;
 }
@@ -101,6 +107,7 @@
 
 .user-contents-title {
   padding: 5px 0px 0px 15px;
+  cursor: pointer;
 }
 
 .user-contents-btn {
@@ -137,7 +144,11 @@
 
 .user-contents-like > * {
   display: inline-block;
-  padding-left: 6px;
+  padding-left: 2px;
+}
+
+.user-contents-like > i {
+  cursor: pointer;
 }
 
 

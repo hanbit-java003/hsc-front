@@ -1,0 +1,29 @@
+<div class="with-user-img">
+    <img src="./img/{{img}}.jpg"
+         style="width: 150px; height: 150px; border-radius: 75px">
+</div>
+<div class="with-user-desc">
+    <div class="with-user-id">
+        {{~id~}}
+    </div>
+    <div class="with-user-text">
+        {{~text~}}
+    </div>
+    <ul class="with-user-travel">
+        <li class="with-user-travel-diary">
+            <i class="fa fa-book"></i>
+            여행기 <span>{{diary}}</span>
+        </li>
+        <li class="with-user-travel-country">
+            <i class="fa fa-map-marker"></i>
+            여행국가 <span>{{country}}</span>
+        </li>
+        <li>
+            <ul class="with-user-travel-country-flag">
+                {{~#each flag~}}
+                    <li><img src="img/{{name}}.png"></li>
+                {{~/each~}}
+            </ul>
+        </li>
+    </ul>
+</div>
