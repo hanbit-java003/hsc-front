@@ -43,11 +43,11 @@ function initUserInfo(users) {
 
 
         $('.user-info').on('click', function () {
-            location.href = './with.html';
+            var userId = $(this).attr('user-name');
+            location.href = './with.html?id=' + userId;
         });
     }
 }
-
 
 initCountry(country);
 initContents(contents);

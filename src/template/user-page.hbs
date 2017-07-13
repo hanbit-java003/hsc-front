@@ -1,0 +1,58 @@
+<div class="with-user-profile">
+    <div class="with-user-img">
+        <img src="./img/user/{{img}}.jpg"
+             style="width: 150px; height: 150px; border-radius: 75px">
+    </div>
+    <div class="with-user-desc">
+        <div class="with-user-id">
+            {{~id~}}
+        </div>
+        <div class="with-user-text">
+            {{~text~}}
+        </div>
+        <ul class="with-user-travel">
+            <li class="with-user-travel-diary">
+                <i class="fa fa-book"></i>
+                여행기 <span>{{diary}}</span>
+            </li>
+            <li class="with-user-travel-country">
+                <i class="fa fa-map-marker"></i>
+                여행국가 <span>{{country}}</span>
+            </li>
+            <li>
+                <ul class="with-user-travel-country-flag">
+                    {{~#each flag~}}
+                        <li><img src="img/flag/{{name}}.png"></li>
+                    {{~/each~}}
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<ul class="with-user-contents">
+    {{~#each contents~}}
+    <li>
+        <div class="user-contents-img">
+            <img src="img/albums/{{album}}.jpg">
+        </div>
+        <div class="user-contents-desc">
+            <div class="user-contents-title">
+                {{~title~}}
+            </div>
+            <div class="user-contents-btn">
+                <i class="fa fa-ellipsis-v"></i>
+            </div>
+        </div>
+        <div class="user-contents-userinfo">
+            <div class="with-user-img-container">
+                <img class="editor-thumbnail" src="img/user/{{user}}.jpg">
+            </div>
+            <div class="user-contents-userid">{{id}}</div>
+            <div class="user-contents-like">
+                <i class="fa fa-heart-o"></i>
+                <div>{{like}}</div>
+            </div>
+        </div>
+    </li>
+    {{~/each~}}
+</ul>

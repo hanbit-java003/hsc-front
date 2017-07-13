@@ -2,31 +2,30 @@ require('bootstrap');
 require('../less/with.less');
 
 var common = require('./common');
+var main = require('./main')
 
-var users = require('./model/users/user01');
-var diarys = require('./model/users/diary');
+var URLSearchParams = require('url-search-params');
+var params = new URLSearchParams(location.search);
 
-function getUsers(users) {
-    $('.with-user-profile').empty();
+var userName = params.get('id');
 
-    var template = require('../template/user-profile.hbs');
-    var html = template(users);
-
-    $('.with-user-profile').append(html);
+try {
+    var model = require('./model/users/' + userName);
+}
+catch (e) {
+    var model = require('./model/users/user01');
 }
 
-function getDiarys(diarys) {
-    $('.with-user-contents').empty();
+function getUsers(model) {
+    $('.with-user-info').empty();
 
-    var template = require('../template/user-contents.hbs');
+    var template = require('../template/user-page.hbs');
+    var html;
 
-    for (var i=0; i<diarys.length; i++) {
-        var html = template(diarys[i]);
-
-        $('.with-user-contents').append(html);
+    for (var i=0; i<model.contents.length; i++) {
+        html = template(model);
     }
-
+    $('.with-user-info').append(html);
 }
 
-getUsers(users);
-getDiarys(diarys);
+getUsers(model);

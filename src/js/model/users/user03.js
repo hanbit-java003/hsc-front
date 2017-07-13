@@ -1,9 +1,9 @@
 module.exports = {
-    id: '중기마눌',
-    text: '인생은 나처럼',
+    id: '이지은',
+    text: '오빠가 좋은걸~',
     diary: '11',
     country: '4',
-    img: 'shk',
+    img: 'iu',
     flag: [{
         name: 'spain'
     }, {
@@ -16,38 +16,38 @@ module.exports = {
     contents: [{
         album: 'eftower',
         title: '파리지앵',
-        user: 'shk',
-        id: '중기마눌',
+        user: 'iu',
+        id: '이지은',
         like: '30'
     }, {
         album: 'france',
         title: '불란서 갔다왔어용',
-        user: 'shk',
-        id: '중기마눌',
+        user: 'iu',
+        id: '이지은',
         like: '14'
     }, {
         album: 'view',
         title: '날개자리에서..',
-        user: 'shk',
-        id: '중기마눌',
+        user: 'iu',
+        id: '이지은',
         like: '1'
     },{
         album: 'eftower',
         title: '파리지앵',
-        user: 'shk',
-        id: '중기마눌',
+        user: 'iu',
+        id: '이지은',
         like: '30'
     }, {
         album: 'france',
         title: '불란서 갔다왔어용',
-        user: 'shk',
-        id: '중기마눌',
+        user: 'iu',
+        id: '이지은',
         like: '14'
     }, {
         album: 'view',
         title: '날개자리에서..',
-        user: 'shk',
-        id: '중기마눌',
+        user: 'iu',
+        id: '이지은',
         like: '1'
     }]
 };
