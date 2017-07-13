@@ -38,6 +38,10 @@ $('.header-logo').on('click', function () {
     location.href = './';
 });
 
+$('.header-bt').on('click', function () {
+    location.href = '../login.html';
+});
+
 $('.go-top-btn').on('click', function () {
     $('body, html').animate({
         scrollTop: 0

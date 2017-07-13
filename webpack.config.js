@@ -14,8 +14,8 @@ const pages = [{
     html: 'with',
     script: 'with',
 }, {
-    html: 'sub',
-    script: 'sub',
+    html: 'login',
+    script: 'login',
 }];
 
 module.exports = {
