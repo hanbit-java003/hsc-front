@@ -23,7 +23,7 @@ function relocateGoTopButton() {
     if (bodyHeight - footerHeight - scrollTop < windowHeight) {
         $('.go-top-btn').css({
             position: 'absolute',
-            bottom: 0
+            bottom: -55
         });
     }
     else {

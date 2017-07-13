@@ -1,6 +1,6 @@
 module.exports = [{
     img: 'img/user/shk.jpg',
-    id: '중기마눌',
+    id: '중기꺼',
     name: 'user01',
     text: '인생은 나처럼',
     subMenus: [{
@@ -14,9 +14,9 @@ module.exports = [{
     }]
 }, {
     img: 'img/user/mcw.jpg',
-    id: '문대갈',
+    id: '문공주',
     name: 'user02',
-    text: '얼굴이 크죠',
+    text: '얼굴이 좀 크죠',
     subMenus: [{
         name: 'img/flag/spain.png'
     }, {
@@ -33,7 +33,7 @@ module.exports = [{
     img: 'img/user/iu.jpg',
     id: '이지은',
     name: 'user03',
-    text: '오빠가 좋은걸',
+    text: '오빠가 좋은걸~',
     subMenus: [{
         name: 'img/flag/usa.png'
     }, {
@@ -57,7 +57,7 @@ module.exports = [{
     img: 'img/user/ireane.jpg',
     id: '아이린',
     name: 'user05',
-    text: '일상을 여행처럼 여행을 일상처럼',
+    text: '루키루키!',
     subMenus: [{
         name: 'img/flag/cz.png'
     }, {

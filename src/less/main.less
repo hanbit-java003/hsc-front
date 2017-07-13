@@ -152,33 +152,33 @@
   text-align: left;
   letter-spacing: -1px;
   border-top: solid 1px #333;
+}
 
-  .contents-country {
-    margin-top: 34px;
-    font-size: 22px;
-    font-weight: bold;
-  }
+.contents-country {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
 
-  .contents-title {
-    margin-top: 10px;
-    font-size: 34px;
-  }
+.contents-title {
+  margin-top: 10px;
+  font-size: 34px;
+}
 
-  .contents-sub-title {
-    margin-top: 20px;
-    color: #888;
-    font-size: 16px;
-    font-weight: bold;
-  }
+.contents-sub-title {
+  margin-top: 20px;
+  color: #888;
+  font-size: 16px;
+  font-weight: bold;
+}
 
-  .contents-more {
-    display: inline-block;
-    margin-top: 100px;
-    color: @main-color;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
+.contents-more {
+  display: inline-block;
+  margin-top: 100px;
+  color: @main-color;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .main-section-review {
@@ -194,44 +194,43 @@
   text-align: left;
   letter-spacing: -1px;
   cursor: pointer;
+}
 
-  .contents-review-img {
-    position: relative;
-    height: 50%;
-    background-size: cover;
-    background-position: center;
-  }
+.contents-review-img {
+  position: relative;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+}
 
-  .contents-review-text {
-    height: 50%;
+.contents-review-text {
+  height: 50%;
+}
+.contents-review-title {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
 
-    .contents-review-title {
-      margin-top: 10px;
-      font-size: 20px;
-      font-weight: bold;
-    }
+.contents-review-sub-title {
+  width: 200px;
+  height: 40px;
+  margin-top: 10px;
+  color: #888;
+  font-size: 14px;
+  font-weight: bold;
+}
 
-    .contents-review-sub-title {
-      width: 200px;
-      height: 40px;
-      margin-top: 10px;
-      color: #888;
-      font-size: 14px;
-      font-weight: bold;
-    }
+.contents-review-editor {
+  margin-top: 30px;
+}
 
-    .contents-review-editor {
-      margin-top: 30px;
-
-      .editor-id {
-        display: inline-block;
-        margin-left: 10px;
-        font-size: 16px;
-        font-weight: bold;
-        vertical-align: middle;
-      }
-    }
-  }
+.editor-id {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align: middle;
 }
 
 .contents-each {
@@ -257,11 +256,12 @@
 
 .bottom-writer {
   display: inline-block;
-  padding: 50px 80px 0px 80px;
+  width: 1180px;
   border-top: solid 1px #333;
 }
 
 .bottom-writer-text {
+  margin-top: 60px;
   font-size: 28px;
   line-height: 100px;
   float: left;
@@ -274,11 +274,20 @@
   border-bottom: solid 2px @main-color;
 }
 
-.bottom-writer-img {
+.bottom-writer-img-left {
+  margin: 60px 0px 0px 80px;
   width: 200px;
   height: 200px;
   background-repeat: no-repeat;
   float: left;
+}
+
+.bottom-writer-img-right {
+  margin: 60px 80px 0px 0px;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  float: right;
 }
 
 .bottom-wrapper {
@@ -288,24 +297,24 @@
 }
 
 .bottom-prev, .bottom-next {
-  display: inline-block;
-  top: 50px;
-  cursor: pointer;
-  font-size: 100px;
   position: absolute;
+  top: 50px;
+  width: 75px;
+  cursor: pointer;
 }
 
 .bottom-prev {
-  left: 100px;
+  left: 50%;
+  margin-left: -670px;
 }
 
 .bottom-next {
-  right: 100px;
+  right: 50%;
+  margin-right: -670px;
 }
 
 .bottom-user {
   display: inline-block;
-  margin-bottom: 50px;
 }
 
 .user-info {
