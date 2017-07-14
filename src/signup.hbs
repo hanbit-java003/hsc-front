@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>여행을 쓰자, 욜로</title>
+</head>
+<body>
+{{> template/header }}
+<section class="signup-section">
+    <div class="signup-wrapper">
+        <div class="signup-text">
+            <div class="signup-title">회원 가입</div>
+            <div class="signup-desc">여행의 소중한 순간을 볼로에 담아보세요.</div>
+        </div>
+        <div class="sigunp-age">
+            <input id="under-age" class="sign-up" type="checkbox">
+            <span class="sign-up">만 14세 미만</span>
+            <input id="over-age" class="sign-up" type="checkbox">
+            <span class="sign-up">만 14세 이상</span>
+        </div>
+        <ul class="signup-input-wrapper">
+            <li class="signup-id-wrapper">
+                <div class="signup-id-title">아이디</div>
+                <input type="text" placeholder="아이디">
+            </li>
+            <li class="signup-email-wrapper">
+                <div class="signup-email-title">이메일</div>
+                <input type="email" placeholder="이메일">
+            </li>
+            <li class="signup-pwd-wrapper">
+                <div class="signup-pwd-title">비밀번호</div>
+                <input type="password" placeholder="비밀번호">
+            </li>
+            <li class="signup-confirm-wrapper">
+                <div class="signup-confirm-title">비밀번호 확인</div>
+                <input type="password" placeholder="비밀번호 확인">
+            </li>
+        </ul>
+        <div class="signup-chkbox-wrapper">
+            <input class="sign-up" type="checkbox">
+            <span class="sign-up">전체 동의</span>
+            <div class="signup-chkbox-sub">
+                <div>
+                    <input class="sign-up" type="checkbox">
+                    <span class="sign-up">YOLO 서비스 이용약관 동의(만 14세 이상) ></span>
+                </div>
+                <div>
+                    <input class="sign-up" type="checkbox">
+                    <span class="sign-up">개인정보 수집/이용 동의 ></span>
+                </div>
+                <div>
+                    <input class="sign-up" type="checkbox">
+                    <span class="sign-up">개인위치정보 수집/이용 동의 ></span>
+                </div>
+            </div>
+        </div>
+        <div class="signup-btn-wrapper">
+            <button class="signup-btn">회원 가입</button>
+        </div>
+        <ul class="signup-option">
+            <li>이미 회원이세요?</li>
+            <li>로그인 하기</li>
+        </ul>
+    </div>
+</section>
+{{> template/footer }}
+</body>
+</html>
