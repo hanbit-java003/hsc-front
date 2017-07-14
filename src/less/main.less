@@ -2,8 +2,7 @@
 
 .main-intro {
   margin: 0 auto;
-  min-width: @body-min-width;
-  width: 100%;
+  width: @body-min-width;
   z-index: 100;
 }
 
@@ -305,20 +304,32 @@
 
 .bottom-prev {
   left: 50%;
-  margin-left: -670px;
+  margin-left: -610px;
 }
 
 .bottom-next {
   right: 50%;
-  margin-right: -670px;
+  margin-right: -610px;
+}
+
+.bottom-wrapper {
+  position: relative;
+}
+
+.bottom-user-wrapper {
+  position: relative;
+  margin: 0 96px;
+  overflow: hidden;
 }
 
 .bottom-user {
   display: inline-block;
+  width: 3000px;
 }
 
 .user-info {
-  margin: 0px 40px 40px 40px;
+  width: auto;
+  margin-right: 54px;
   font-weight: bold;
   text-align: center;
   float: left;

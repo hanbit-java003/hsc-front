@@ -12,7 +12,7 @@ function initCountry(country) {
 
     var template = require('../template/main/country.hbs');
 
-    for (var i=0; i<country.length; i++) {
+    for (var i = 0; i < country.length; i++) {
         var html = template(country[i]);
 
         $('.main-mid-country').append(html);
@@ -24,7 +24,7 @@ function initContents(contents) {
 
     var template = require('../template/main/contents.hbs');
 
-    for (var i=0; i<contents.length; i++) {
+    for (var i = 0; i < contents.length; i++) {
         var html = template(contents[i]);
 
         $('.main-section-review').append(html);
@@ -36,7 +36,7 @@ function initUserInfo(users) {
 
     var template = require('../template/main/userInfo.hbs');
 
-    for (var i=0; i<users.length; i++) {
+    for (var i = 0; i < users.length; i++) {
         var html = template(users[i]);
 
         $('.bottom-user').append(html);
@@ -52,3 +52,37 @@ function initUserInfo(users) {
 initCountry(country);
 initContents(contents);
 initUserInfo(users);
+
+$('.bottom-prev').on('click', function () {
+    console.log('나눌렀니?');
+    //$('.bottom-user').css("transform","translate3d(-130px, 0px, 0px)");
+});
+
+$('.bottom-next').on('click', function () {
+    console.log('나눌렀니?');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

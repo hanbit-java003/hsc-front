@@ -16,6 +16,9 @@ const pages = [{
 }, {
     html: 'login',
     script: 'login',
+}, {
+    html: 'password',
+    script: 'password',
 }];
 
 module.exports = {
