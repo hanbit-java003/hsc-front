@@ -62,8 +62,10 @@ $('.bottom-next').on('click', function () {
     console.log('나눌렀니?');
 });
 
-
-
+$('.country > li').on('click', function () {
+    //location.href = './search.html?q=' + '스페인';
+    location.href = './search.html' ;
+})
 
 
 

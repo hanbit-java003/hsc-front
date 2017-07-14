@@ -14,6 +14,9 @@ const pages = [{
     html: 'with',
     script: 'with',
 }, {
+    html: 'search',
+    script: 'search',
+}, {
     html: 'signup',
     script: 'signup',
 }, {
