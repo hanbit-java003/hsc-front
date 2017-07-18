@@ -1,0 +1,40 @@
+<div class="search-content-wrapper">
+    <div class="search-content-left">
+        <div class="search-content-img">
+            <img src="img/albums/{{img}}">
+        </div>
+        <div class="search-content-userInfo">
+            <div>
+                <img class="editor-thumbnail" src="./img/user/{{user}}">
+                <span>{{userId}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="search-content-right">
+        <div class="search-content-text">
+            <div class="search-content-title">
+                {{~title~}}
+            </div>
+            <div class="search-content-summary">
+                {{~content~}}
+            </div>
+        </div>
+        <div class="search-content-etc">
+            <ul class="search-content-route">
+                {{~#each route~}}
+                    <li>{{name}}</li>
+                {{~/each~}}
+            </ul>
+            <div class="search-content-hashtag">
+                {{~hashtag~}}
+            </div>
+            <div class="search-content-date">
+                {{~date~}}
+            </div>
+        </div>
+    </div>
+    <div class="search-tap-like">
+        <i class="fa fa-heart-o"></i>
+        <span>{{like}}</span>
+    </div>
+</div>
