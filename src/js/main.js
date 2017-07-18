@@ -20,14 +20,14 @@ function initCountry(country) {
 }
 
 function initContents(contents) {
-    $('.main-section-review').empty();
+    $('.main-contents-wrapper').empty();
 
     var template = require('../template/main/contents.hbs');
 
     for (var i = 0; i < contents.length; i++) {
         var html = template(contents[i]);
 
-        $('.main-section-review').append(html);
+        $('.main-contents-wrapper').append(html);
     }
 }
 
