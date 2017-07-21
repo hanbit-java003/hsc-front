@@ -4,7 +4,6 @@ require('../less/main.less');
 var common = require('./common');
 
 var country = require('./model/country');
-var contents = require('./model/contents');
 var users = require('./model/userInfo');
 
 function initCountry(country) {
@@ -18,6 +17,13 @@ function initCountry(country) {
         $('.main-mid-country').append(html);
     }
 }
+
+$.ajax({
+   url: '/api/main/contents',
+   success: function (result) {
+       initContents(result);
+   }
+});
 
 function initContents(contents) {
     $('.main-contents-wrapper').empty();
@@ -50,7 +56,7 @@ function initUserInfo(users) {
 }
 
 initCountry(country);
-initContents(contents);
+//initContents(contents);
 initUserInfo(users);
 
 $('.bottom-prev').on('click', function () {
