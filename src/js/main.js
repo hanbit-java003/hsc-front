@@ -19,8 +19,9 @@ function initCountry(country) {
 }
 
 $.ajax({
-   url: '/api/main/contents',
+   url: '/api/main/hungary',
    success: function (result) {
+       //console.log(result);
        initContents(result);
    }
 });
@@ -29,12 +30,9 @@ function initContents(contents) {
     $('.main-contents-wrapper').empty();
 
     var template = require('../template/main/contents.hbs');
+    var html = template(contents);
 
-    for (var i = 0; i < contents.length; i++) {
-        var html = template(contents[i]);
-
-        $('.main-contents-wrapper').append(html);
-    }
+    $('.main-contents-wrapper').append(html);
 }
 
 function initUserInfo(users) {
@@ -46,17 +44,15 @@ function initUserInfo(users) {
         var html = template(users[i]);
 
         $('.bottom-user').append(html);
-
-
-        $('.user-info').on('click', function () {
-            var userId = $(this).attr('user-name');
-            location.href = './with.html?id=' + userId;
-        });
     }
+
+    $('.user-info').on('click', function () {
+        var userId = $(this).attr('user-name');
+        location.href = './with.html?id=' + userId;
+    });
 }
 
 initCountry(country);
-//initContents(contents);
 initUserInfo(users);
 
 $('.bottom-prev').on('click', function () {
@@ -71,26 +67,4 @@ $('.bottom-next').on('click', function () {
 $('.country > li').on('click', function () {
     //location.href = './search.html?q=' + '스페인';
     location.href = './search.html' ;
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});

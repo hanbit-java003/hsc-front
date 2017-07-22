@@ -1,11 +1,17 @@
 <div class="section-review-text">
-    <div class="contents-country">{{name}}</div>
-    <div class="contents-title">{{{title}}}</div>
-    <div class="contents-sub-title">{{{subTitle}}}</div>
+    <div class="contents-country">
+        {{~name~}}
+    </div>
+    <div class="contents-title">
+        {{{mainTitle}}}
+    </div>
+    <div class="contents-sub-title">
+        {{{subTitle}}}
+    </div>
     <div class="contents-more">+ 더보기</div>
 </div>
 <ul class="main-section-review">
-    {{#each subMenu}}
+    {{~#each submenu~}}
         <li>
             <div class="contents-review-img"
                  style="background-image: url({{img}})">
@@ -14,15 +20,21 @@
                 {{/if}}
             </div>
             <div class="contents-review-text">
-                <div class="contents-review-title">{{title}}</div>
-                <div class="contents-review-sub-title">{{content}}</div>
+                <div class="contents-review-title">
+                    {{~title~}}
+                </div>
+                <div class="contents-review-sub-title">
+                    {{~content~}}
+                </div>
                 <ul class="contents-review-editor">
                     <li class="editor-thumbnail"
                         style="background-image: url({{thumbnail}})">
                     </li>
-                    <li class="editor-id">{{id}}</li>
+                    <li class="editor-id">
+                        {{~userId~}}
+                    </li>
                 </ul>
             </div>
         </li>
-    {{/each}}
+    {{~/each~}}
 </ul>
