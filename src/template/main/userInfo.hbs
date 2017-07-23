@@ -1,13 +1,13 @@
-<li class="user-info" user-name="{{name}}">
+<li class="user-info" user-name="{{userNo}}">
     <div class="user-img"
          style="background-image: url({{img}})">
     </div>
-    <div class="user-id">{{id}}</div>
+    <div class="user-id">{{userId}}</div>
     <div class="user-text">{{text}}</div>
     <ul class="user-travel">
-        {{#each subMenus}}
+        {{#each visited}}
             <li class="user-travel-icon"
-                style="background-image: url({{name}})"></li>
+                style="background-image: url({{visitedImg}})"></li>
         {{/each}}
         {{#if more}}
             <span>+4</span>

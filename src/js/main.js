@@ -4,7 +4,49 @@ require('../less/main.less');
 var common = require('./common');
 
 var country = require('./model/country');
-var users = require('./model/userInfo');
+
+$.ajax({
+   url: '/api/main/hungary',
+   success: function (result) {
+       initContents(result);
+   }
+});
+
+$.ajax({
+    url: '/api/users',
+    success: function (result) {
+        initUserInfo(result);
+    }
+});
+
+function initContents(contents) {
+    $('.main-contents-wrapper').empty();
+
+    var template = require('../template/main/contents.hbs');
+
+    for (var i = 0; i < 3; i++) {
+        var html = template(contents);
+
+        $('.main-contents-wrapper').append(html);
+    }
+}
+
+function initUserInfo(users) {
+    $('.bottom-user').empty();
+
+    var template = require('../template/main/userInfo.hbs');
+
+    for (var i = 0; i < 5; i++) {
+        var html = template(users[i]);
+
+        $('.bottom-user').append(html);
+    }
+
+    $('.user-info').on('click', function () {
+        var userId = $(this).attr('user-name');
+        location.href = './with.html?id=' + userId;
+    });
+}
 
 function initCountry(country) {
     $('.main-mid-country').empty();
@@ -18,42 +60,7 @@ function initCountry(country) {
     }
 }
 
-$.ajax({
-   url: '/api/main/hungary',
-   success: function (result) {
-       //console.log(result);
-       initContents(result);
-   }
-});
-
-function initContents(contents) {
-    $('.main-contents-wrapper').empty();
-
-    var template = require('../template/main/contents.hbs');
-    var html = template(contents);
-
-    $('.main-contents-wrapper').append(html);
-}
-
-function initUserInfo(users) {
-    $('.bottom-user').empty();
-
-    var template = require('../template/main/userInfo.hbs');
-
-    for (var i = 0; i < users.length; i++) {
-        var html = template(users[i]);
-
-        $('.bottom-user').append(html);
-    }
-
-    $('.user-info').on('click', function () {
-        var userId = $(this).attr('user-name');
-        location.href = './with.html?id=' + userId;
-    });
-}
-
 initCountry(country);
-initUserInfo(users);
 
 $('.bottom-prev').on('click', function () {
     console.log('나눌렀니?');
