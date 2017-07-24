@@ -3,7 +3,7 @@ module.exports = {
     text: '얼큰이에요',
     diary: '5',
     country: '9',
-    img: 'mcw',
+    img: 'img/user/mcw.jpg',
     flag: [{
         name: 'spain'
     }, {

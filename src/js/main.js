@@ -6,14 +6,14 @@ var common = require('./common');
 var country = require('./model/country');
 
 $.ajax({
-   url: '/api/main/hungary',
+   url: '/api/main/france',
    success: function (result) {
        initContents(result);
    }
 });
 
 $.ajax({
-    url: '/api/users',
+    url: '/api/users/',
     success: function (result) {
         initUserInfo(result);
     }

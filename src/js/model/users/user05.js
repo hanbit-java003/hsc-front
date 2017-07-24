@@ -3,7 +3,7 @@ module.exports = {
     text: '루키루키',
     diary: '11',
     country: '4',
-    img: 'ireane',
+    img: 'img/user/ireane.jpg',
     flag: [{
         name: 'spain'
     }, {
