@@ -5,29 +5,6 @@ var common = require('./common');
 
 var country = require('./model/country');
 
-function initContents() {
-    $('.main-contents-wrapper').empty();
-
-    var template = require('../template/main/contents.hbs');
-
-    var areas = ['france', 'hungary', 'jeju'];
-
-    for (var i = 0; i < areas.length; i++) {
-        var sectionRow = 'section-row-' + areas[i];
-        $('.main-contents-wrapper').append('<div class="' + sectionRow + '"></div>');
-
-        $.ajax({
-            url: '/api/main/' + areas[i],
-            success: function (result) {
-                var html = template(result);
-                $('.section-row-' + result.id).html(html);
-            }
-        });
-    }
-}
-
-initContents();
-
 $.ajax({
     url: '/api/users/',
     success: function (result) {
@@ -40,7 +17,7 @@ function initUserInfo(users) {
 
     var template = require('../template/main/userInfo.hbs');
 
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < users.length; i++) {
         var html = template(users[i]);
 
         $('.bottom-user').append(html);
@@ -64,7 +41,29 @@ function initCountry(country) {
     }
 }
 
+function initContents() {
+    $('.main-contents-wrapper').empty();
+
+    var template = require('../template/main/contents.hbs');
+
+    var areas = ['france', 'hungary', 'jeju'];
+
+    for (var i = 0; i < areas.length; i++) {
+        var sectionRow = 'section-row-' + areas[i];
+        $('.main-contents-wrapper').append('<div class="' + sectionRow + '"></div>');
+
+        $.ajax({
+            url: '/api/main/' + areas[i],
+            success: function (result) {
+                var html = template(result);
+                $('.section-row-' + result.id).html(html);
+            }
+        });
+    }
+}
+
 initCountry(country);
+initContents();
 
 $('.bottom-prev').on('click', function () {
     console.log('나눌렀니?');
