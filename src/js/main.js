@@ -5,12 +5,28 @@ var common = require('./common');
 
 var country = require('./model/country');
 
-$.ajax({
-   url: '/api/main/france',
-   success: function (result) {
-       initContents(result);
-   }
-});
+function initContents() {
+    $('.main-contents-wrapper').empty();
+
+    var template = require('../template/main/contents.hbs');
+
+    var areas = ['france', 'hungary', 'jeju'];
+
+    for (var i = 0; i < areas.length; i++) {
+        var sectionRow = 'section-row-' + areas[i];
+        $('.main-contents-wrapper').append('<div class="' + sectionRow + '"></div>');
+
+        $.ajax({
+            url: '/api/main/' + areas[i],
+            success: function (result) {
+                var html = template(result);
+                $('.section-row-' + result.id).html(html);
+            }
+        });
+    }
+}
+
+initContents();
 
 $.ajax({
     url: '/api/users/',
@@ -18,18 +34,6 @@ $.ajax({
         initUserInfo(result);
     }
 });
-
-function initContents(contents) {
-    $('.main-contents-wrapper').empty();
-
-    var template = require('../template/main/contents.hbs');
-
-    for (var i = 0; i < 3; i++) {
-        var html = template(contents);
-
-        $('.main-contents-wrapper').append(html);
-    }
-}
 
 function initUserInfo(users) {
     $('.bottom-user').empty();
