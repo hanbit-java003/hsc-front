@@ -1,0 +1,31 @@
+<div class="admin-menu">
+    <div class="ha-logo">YoLo</div>
+    <nav class="ha-menu-list">
+        <div class="ha-menu-group{{#if group-h}}
+             active
+        {{/if}}">
+            <div class="ha-menu">지역</div>
+            <ul class="ha-sub-menu">
+                <li link="area-group"{{#if area-group}}
+                    class="active"
+                {{/if}}>지역관리</li>
+                <li link="area-contents"{{#if area-contents}}
+                    class="active"
+                {{/if}}>컨텐츠</li>
+            </ul>
+        </div>
+        <div class="ha-menu-group{{#if group-u}}
+             active
+        {{/if}}">
+            <div class="ha-menu">유저</div>
+            <ul class="ha-sub-menu">
+                <li link="user-group"{{#if user-group}}
+                    class="active"
+                {{/if}}>유저관리</li>
+                <li link="user-contents"{{#if user-contents}}
+                    class="active"
+                {{/if}}>컨텐츠</li>
+            </ul>
+        </div>
+    </nav>
+</div>

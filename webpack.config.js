@@ -25,6 +25,21 @@ const pages = [{
 }, {
     html: 'password',
     script: 'password',
+}, {
+    html: 'admin/index',
+    script: 'admin/main'
+}, {
+    html: 'admin/area-group',
+    script: 'admin/area-group'
+}, {
+    html: 'admin/area-contents',
+    script: 'admin/area-contents'
+}, {
+    html: 'admin/user-group',
+    script: 'admin/user-group'
+}, {
+    html: 'admin/user-contents',
+    script: 'admin/user-contents'
 }];
 
 module.exports = {

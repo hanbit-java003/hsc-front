@@ -1,0 +1,98 @@
+html {
+  height: 100%;
+}
+
+@menu-width: 180px;
+@main-color: #ff7676;
+
+body {
+  padding-left: @menu-width;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-menu {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: @menu-width;
+  height: 100%;
+  border-right: solid 1px #ddd;
+}
+
+.ha-logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: @main-color;
+  text-align: center;
+  line-height: 200%;
+  cursor: pointer;
+}
+
+.ha-menu {
+  padding: 5px;
+  border-bottom: solid 1px #ddd;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ha-menu:hover {
+  background-color: @main-color;
+  color: #fff;
+}
+
+.ha-sub-menu {
+  display: none;
+}
+
+.ha-sub-menu > li {
+  padding: 5px 5px 5px 20px;
+  cursor: pointer;
+}
+
+.ha-sub-menu > li:hover {
+  background-color: #ddd;
+  color: @main-color;
+  font-weight: bold;
+}
+
+.ha-sub-menu > li.active {
+  border-right: 4px solid @main-color;
+  background-color: #ddd;
+  color: @main-color;
+  font-weight: bold;
+}
+
+.ha-menu-group.active .ha-menu {
+  background-color: @main-color;
+  color: #fff;
+}
+
+.ha-menu-group.active .ha-sub-menu {
+  display: block;
+}
+
+.admin-contents {
+  padding: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
