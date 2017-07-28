@@ -19,3 +19,7 @@ $('.ha-sub-menu > li').on('click', function() {
 
     location.href = link + '.html';
 });
+
+$('.ha-area-add').on('click', function() {
+    alert("나눌렀니?");
+});
