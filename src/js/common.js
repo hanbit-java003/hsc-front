@@ -1,6 +1,6 @@
 $('.search-toggle').on('click', function () {
     $('.header-search-icon').toggle();
-    $('.header-search-bar').toggle();
+    $('.header-search-bar').toggle('100');
 });
 
 $('.select-lang').on('click', function () {
