@@ -53,3 +53,11 @@ $(window).on('scroll', function () {
     relocateGoTopButton();
 });
 relocateGoTopButton();
+
+$('.search-input').on('keyup', function(event) {
+    if (event.keyCode === 13) {
+        var text = $('.search-input').val();
+
+        location.href = './search.html?' + text;
+    }
+});
