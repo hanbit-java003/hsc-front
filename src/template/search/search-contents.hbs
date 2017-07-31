@@ -1,13 +1,11 @@
 <div class="search-content-wrapper">
     <div class="search-content-left">
-        <div class="search-content-img">
-            <img src="img/albums/{{img}}">
+        <div>
+            <img class="search-content-img" src="{{img}}">
         </div>
         <div class="search-content-userInfo">
-            <div>
-                <img class="editor-thumbnail" src="./img/user/{{user}}">
-                <span>{{userId}}</span>
-            </div>
+            <img class="editor-thumbnail" src="{{usersImg}}">
+            <span>{{userId}}</span>
         </div>
     </div>
     <div class="search-content-right">
@@ -26,7 +24,7 @@
                 {{~/each~}}
             </ul>
             <div class="search-content-hashtag">
-                {{~hashtag~}}
+                {{~content~}}
             </div>
             <div class="search-content-date">
                 {{~date~}}

@@ -67,7 +67,7 @@ initContents();
 
 $('.bottom-prev').on('click', function () {
     console.log('나눌렀니?');
-    //$('.bottom-user').css("transform","translate3d(-130px, 0px, 0px)");
+    $('.bottom-user').css("transform","translate3d(-130px, 0px, 0px)");
 });
 
 $('.bottom-next').on('click', function () {
