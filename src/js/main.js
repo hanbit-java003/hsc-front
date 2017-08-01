@@ -25,7 +25,7 @@ function initUserInfo(users) {
 
     $('.user-info').on('click', function () {
         var userId = $(this).attr('user-name');
-        location.href = './with.html?id=' + userId;
+        location.href = './with.html?no=' + userId;
     });
 }
 
