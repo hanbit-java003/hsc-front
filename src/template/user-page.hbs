@@ -30,10 +30,10 @@
     </div>
 </div>
 <ul class="with-user-contents">
-    {{~#each contents~}}
+    {{~#each submenu~}}
     <li>
         <div class="user-contents-img">
-            <img src="img/albums/{{album}}.jpg">
+            <img src="{{img}}">
         </div>
         <div class="user-contents-desc">
             <div class="user-contents-title">
@@ -45,9 +45,9 @@
         </div>
         <div class="user-contents-userinfo">
             <div class="with-user-img-container">
-                <img class="editor-thumbnail" src="img/user/{{user}}.jpg">
+                <img class="editor-thumbnail" src="{{usersImg}}">
             </div>
-            <div class="user-contents-userid">{{id}}</div>
+            <div class="user-contents-userid">{{userId}}</div>
             <div class="user-contents-like">
                 <i class="fa fa-heart-o"></i>
                 <div>{{like}}</div>
