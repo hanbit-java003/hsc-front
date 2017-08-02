@@ -7,9 +7,17 @@ $.ajax({
     url: '/api/main/france',
     success: function(result) {
         initSearchContents(result.submenu);
-        console.log(result.submenu);
     }
 });
+
+$.ajax({
+    url: '/api/users',
+    success: function(result) {
+        initSearchUsers(result);
+    }
+});
+
+
 
 $('.search-tab-btns > div').on('click', function() {
     if ($(this).hasClass('active')) {
@@ -47,13 +55,13 @@ function initSearchContents(contents) {
     $('.search-input').val(decodeURI(url2));
 }
 
-function initSearchUsers() {
+function initSearchUsers(users) {
     $('.search-users-tab').empty();
 
     var template = require('../template/search/search-users.hbs');
-    var html = template();
 
-    $('.search-users-tab').append(html);
+    for (var i=0; i<users.length; i++) {
+        var html = template(users[i]);
+        $('.search-users-tab').append(html);
+    }
 }
-
-initSearchUsers();
