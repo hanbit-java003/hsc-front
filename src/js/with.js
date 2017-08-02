@@ -2,7 +2,7 @@ require('bootstrap');
 require('../less/with.less');
 
 var common = require('./common');
-var main = require('./main')
+var main = require('./main');
 
 var URLSearchParams = require('url-search-params');
 var params = new URLSearchParams(location.search);
