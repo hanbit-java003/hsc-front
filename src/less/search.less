@@ -1,4 +1,6 @@
 @import 'common';
+@import 'main';
+@import 'with';
 
 section {
   margin-top: 80px;
@@ -15,7 +17,8 @@ section {
   margin: 0 auto;
 }
 
-.search-tab-btns > li {
+.search-tab-btns > div {
+  position: relative;
   display: inline-block;
   width: 50%;
   height: 100%;
@@ -27,24 +30,28 @@ section {
   cursor: pointer;
 }
 
-.search-tab-btns > li.active {
-  //border-bottom: solid 2px @main-color;
+.search-tab-btns > div.active > div {
+  position: absolute;
+  top: 50px;
+  left: 230px;
+  width: 150px;
+  border-bottom: solid 3px @main-color;
 }
 
-.search-tab-contents {
+.search-tab {
   border-top: solid 1px #999;
   font-weight: bold;
 }
 
-.search-tab-contents > li {
+.search-tab > li {
   display: none;
 }
 
-.search-tab-contents > li.active {
+.search-tab > li.active {
   display: block;
 }
 
-.search-contents-tap {
+.search-contents-tab {
   margin: 0 auto;
 }
 
@@ -123,7 +130,7 @@ section {
   font-style: italic;
 }
 
-.search-tap-like {
+.search-tab-like {
   position: absolute;
   display: inline-block;
   bottom: 30px;
@@ -132,11 +139,44 @@ section {
   font-size: 22px;
 }
 
+.search-users-wrapper {
+  position: relative;
+  width: @body-min-width;
+  margin: 0 auto;
+  padding: 40px 53px 34px 45px;
+  border-bottom: solid 1px #999;
+}
 
+.search-users-wrapper > div {
+  display: inline-block;
+}
 
+.search-users-profile {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
+  text-align: left;
+  vertical-align: middle;
+}
 
+.users-id {
+  font-size: 30px;
+  font-weight: bold;
+}
 
+.users-summary {
+  font-size: 15px;
+  color: #666;
+  padding-bottom: 20px;
+}
 
+.users-travel-info > li {
+  display: inline-block;
+  padding-right: 40px;
+  color: #888;
+  font-size: 16px;
+  font-weight: bold;
+}
 
 
 

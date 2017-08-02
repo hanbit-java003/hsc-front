@@ -8,18 +8,26 @@
 {{> template/header}}
 <section>
     <div class="search-tabs">
-        <ul class="search-tab-btns">
-            <li class="active">여행기</li>
-            <li>사용자</li>
-        </ul>
-        <ul class="search-tab-contents">
-            <li class="active">
-                <div class="search-contents-tap">
+        <div class="search-tab-btns">
+            <div tab-id="contents" class="active">
+                여행기
+                <div></div>
+            </div>
+            <div tab-id="users">
+                사용자
+                <div></div>
+            </div>
+        </div>
+        <ul class="search-tab">
+            <li tab-id="contents" class="active">
+                <div class="search-contents-tab">
                     <!-- search-contents.hbs  db 연동함 -->
                 </div>
             </li>
-            <li>
-
+            <li tab-id="users">
+                <div class="search-users-tab">
+                   <!-- search-users.hbs  db 연동 해야함 -->
+                </div>
             </li>
         </ul>
     </div>
