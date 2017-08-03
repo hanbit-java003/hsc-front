@@ -17,7 +17,7 @@ function initUserInfo(users) {
 
     var template = require('../template/main/userInfo.hbs');
 
-    for (var i = 0; i < users.length; i++) {
+    for (var i = 0; i < 5; i++) {
         var html = template(users[i]);
 
         $('.bottom-user').append(html);

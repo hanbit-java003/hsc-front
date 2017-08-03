@@ -5,6 +5,10 @@ $('.search-toggle').on('click', function () {
 
 $('.select-lang').on('click', function () {
     $('.lang-eng').toggle();
+
+    $('.lang-eng').on('click', function (){
+        alert('영어는 나중에 만들겠음')
+    });
 });
 
 function relocateGoTopButton() {
