@@ -4,9 +4,9 @@ require('../less/search.less');
 var common = require('./common');
 
 $.ajax({
-    url: '/api/main/france',
+    url: '/api/main/result',
     success: function(result) {
-        initSearchContents(result.submenu);
+        initSearchContents(result);
     }
 });
 
@@ -16,8 +16,6 @@ $.ajax({
         initSearchUsers(result);
     }
 });
-
-
 
 $('.search-tab-btns > div').on('click', function() {
     if ($(this).hasClass('active')) {
