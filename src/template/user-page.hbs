@@ -19,10 +19,10 @@
                 <i class="fa fa-map-marker"></i>
                 여행국가 <span>{{country}}</span>
             </li>
-            <li>
+            <li class="with-user-travel-flag">
                 <ul class="with-user-travel-country-flag">
-                    {{~#each flag~}}
-                        <li><img src="img/flag/{{name}}.png"></li>
+                    {{~#each userSub~}}
+                        <li><img src="{{visitedImg}}"></li>
                     {{~/each~}}
                 </ul>
             </li>
