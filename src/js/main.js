@@ -5,28 +5,25 @@ var common = require('./common');
 
 var country = require('./model/country');
 
-$.ajax({
-    url: '/api/users/',
-    success: function (result) {
-        initUserInfo(result);
-    }
-});
-
-function initUserInfo(users) {
+function initUserInfo() {
     $('.bottom-user').empty();
 
     var template = require('../template/main/userInfo.hbs');
 
     for (var i = 0; i < 5; i++) {
-        var html = template(users[i]);
+        $.ajax({
+            url: '/api/user/' + (i + 1),
+            success: function (result) {
+                var html = template(result);
+                $('.bottom-user').append(html);
 
-        $('.bottom-user').append(html);
+                $('.user-info').on('click', function () {
+                    var userId = $(this).attr('user-name');
+                    location.href = './with.html?no=' + userId;
+                });
+            }
+        });
     }
-
-    $('.user-info').on('click', function () {
-        var userId = $(this).attr('user-name');
-        location.href = './with.html?no=' + userId;
-    });
 }
 
 function initCountry(country) {
@@ -64,6 +61,7 @@ function initContents() {
 
 initCountry(country);
 initContents();
+initUserInfo();
 
 $('.bottom-prev').on('click', function () {
     console.log('나눌렀니?');
