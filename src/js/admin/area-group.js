@@ -5,15 +5,20 @@ var common = require('./common');
 
 
 $.ajax({
-    url: 'http://localhost:84/api/main/france',
+    url: '/api/admin/group',
     success: function(result) {
         initAreas(result);
     }
 });
 
 function initAreas(area) {
-    var template = require('../../template/admin/ha-area.hbs');
-    var html = template(area);
+    $('.ha-area-groups tbody').empty();
 
-    $('.ha-area-groups > tbody').html(html);
+    var template = require('../../template/admin/ha-area.hbs');
+
+    for (var i=0; i<area.length; i++) {
+        var html = template(area);
+
+        $('.ha-area-groups tbody').html(html);
+    }
 }
