@@ -286,12 +286,6 @@
   float: right;
 }
 
-.bottom-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
 .bottom-prev, .bottom-next {
   position: absolute;
   top: 50px;
@@ -313,8 +307,14 @@
   position: relative;
 }
 
-.bottom-user {
+.bottom-user-wrapper {
+  width: 800px;
+  overflow: hidden;
+}
+
+.bottom-user-row {
   display: inline-block;
+  vertical-align: top;
 }
 
 .user-info {
@@ -345,6 +345,12 @@
   color: #666;
   padding-bottom: 12px;
   border-bottom: solid 1px #ddd;
+}
+
+.user-travel {
+  width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .user-travel > span {

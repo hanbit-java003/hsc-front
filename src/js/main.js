@@ -10,20 +10,28 @@ function initUserInfo() {
 
     var template = require('../template/main/userInfo.hbs');
 
-    for (var i = 0; i < 5; i++) {
-        $.ajax({
-            url: '/api/user/' + (i + 1),
-            success: function (result) {
-                var html = template(result);
-                $('.bottom-user').append(html);
+    $.ajax({
+        url: '/api/users',
+        success: function (result) {
+            for (var i = 0; i < result.length; i++) {
+                var users = 'users-row-' + (i + 1);
+                $('.bottom-user').append('<div class="bottom-user-row ' + users + '"></div>');
 
-                $('.user-info').on('click', function () {
-                    var userId = $(this).attr('user-name');
-                    location.href = './with.html?no=' + userId;
+                $.ajax({
+                    url: '/api/user/' + (i + 1),
+                    success: function (result) {
+                        var html = template(result);
+                        $('.users-row-' + result.userNo).html(html);
+
+                        $('.user-info').on('click', function () {
+                            var userId = $(this).attr('user-name');
+                            location.href = './with.html?no=' + userId;
+                        });
+                    }
                 });
             }
-        });
-    }
+        }
+    });
 }
 
 function initCountry(country) {
@@ -65,7 +73,6 @@ initUserInfo();
 
 $('.bottom-prev').on('click', function () {
     console.log('나눌렀니?');
-    $('.bottom-user').css("transform","translate3d(-130px, 0px, 0px)");
 });
 
 $('.bottom-next').on('click', function () {
@@ -74,5 +81,5 @@ $('.bottom-next').on('click', function () {
 
 $('.country > li').on('click', function () {
     //location.href = './search.html?q=' + '스페인';
-    location.href = './search.html' ;
+    location.href = './search.html';
 });
