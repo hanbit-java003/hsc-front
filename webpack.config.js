@@ -64,8 +64,22 @@ module.exports = {
                 }]
             })
         }, {
+            test: /\.css$/,
+            use: ExtractTextWebpackPlugin.extract({
+                fallback: 'style-loader',
+                use: [{
+                    loader: 'css-loader',
+                    options: {
+                        url: false
+                    }
+                }]
+            })
+        }, {
             test: /\.hbs$/,
-            loader: 'handlebars-loader'
+            loader: 'handlebars-loader',
+            query: {
+                helperDirs: path.resolve(__dirname, 'src/template/helpers')
+            }
         }]
     },
     devServer: {
