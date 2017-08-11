@@ -13,7 +13,7 @@ function initUserInfo() {
     $.ajax({
         url: '/api/users',
         success: function (result) {
-            for (var i = 0; i < result.length; i++) {
+            for (var i = 0; i < 5; i++) {
                 var users = 'users-row-' + (i + 1);
                 $('.bottom-user').append('<div class="bottom-user-row ' + users + '"></div>');
 
