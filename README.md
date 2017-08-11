@@ -11,8 +11,8 @@
 ## Usage
 
 ```
-git clone https://github.com/hanbit-java003/webpack-starter.git
-cd webpack-starter
+git clone https://github.com/hanbit-java003/hsc-front.git
+cd hsc-front
 npm install
 npm start
 ```
