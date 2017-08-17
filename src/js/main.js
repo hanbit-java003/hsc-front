@@ -80,6 +80,7 @@ $('.bottom-next').on('click', function () {
 });
 
 $('.country > li').on('click', function () {
-    //location.href = './search.html?q=' + '스페인';
-    location.href = './search.html';
+    var text = $(this).text();
+
+    location.href = './search.html?' + text;
 });
