@@ -65,3 +65,39 @@ $('.search-input').on('keyup', function(event) {
         location.href = './search.html?' + text;
     }
 });
+
+$('.header-btn-member').on('click', function () {
+    $('body').append('<div class="overlay-layer dark-layer"></div>');
+    $('body').css('overflow', 'hidden');
+
+    var memberLayer = require('../template/member-menu.hbs');
+
+    $('body').append(memberLayer);
+
+    $('.ht-member-toggle').on('click', function () {
+        $('.ht-sign-in').toggle();
+        $('.ht-sign-up').toggle();
+    });
+
+    $('.ht-member-layer').animate({
+        left: '0px'
+    }, {
+        duration: 500,
+        complete: function () { // 애니메이션 끝나면 얘가 불려짐
+            $('.overlay-layer').on('click', function () {
+                $('.ht-member-layer').animate({
+                    left: '-333px'
+                }, {
+                    duration: 500,
+                    complete: function () {
+                        $('.ht-member-layer').remove();
+                        $('.overlay-layer').remove();
+                        $('body').css('overflow', 'auto');
+                    }
+                });
+            })
+        }
+    });
+});
+
+

@@ -64,6 +64,167 @@ input::-webkit-input-placeholder {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+/////////////////////////
+.overlay-layer {
+  z-index: 2000;
+}
+
+.ht-member-layer {
+  position: fixed;
+  top: 0px;
+  left: -333px;
+  width: 333px;
+  height: 100%;
+  background-color: #ebebeb;
+  z-index: 5000;
+  overflow: hidden;
+}
+
+.ht-member-form {
+  padding: 40px 30px 0px 30px;
+}
+
+.ht-member-info {
+  background-color: #fff;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+  color: #999;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ht-member-logo {
+  text-align: center;
+}
+
+.ht-member-logo > div {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: @main-color;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  line-height: 40px;
+}
+
+.ht-member-form-group {
+  position: relative;
+  margin-top: 15px;
+}
+
+.ht-member-form-group > input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: solid 1px #888;
+}
+
+.ht-member-form-group > input:active,
+.ht-member-form-group > input:focus {
+  outline: none;
+  border-color: @main-color;
+}
+
+.ht-member-form-group > i {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  color: #999;
+}
+
+.ht-member-form-group input[type=checkbox] {
+  margin-top: 3px;
+}
+
+.ht-member-form-group .ht-link {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: @main-color;
+}
+
+.ht-member-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  background-color: @main-color;
+  color: #fff;
+  border: 0;
+  outline: none;
+}
+
+.ht-member-btn:hover {
+  opacity: 0.7;
+}
+
+.ht-member-text-sm {
+  padding: 10px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.ht-member-sns {
+  text-align: center;
+}
+
+.ht-member-sns > li {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin: 0px 10px;
+  border: solid 1px #333;
+  color: #555;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.ht-member-text {
+  padding: 20px 0px 20px 0px;
+  color: #999;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ht-right-menu {
+  padding: 20px;
+}
+
+.ht-right-menu-list > li {
+  padding: 20px;
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ht-right-menu-list > li:hover {
+  color: #539fa3;
+}
+
+.ht-highlight {
+  color: @main-color;
+}
+
+.ht-link {
+  color: #333;
+  cursor: pointer;
+}
+
+.ht-link:hover {
+  color: @main-color;
+}
+
+.ht-sign-up {
+  display: none;
+}
+
+//////////////////////////////
+
 .flow-wrapper {
   position: absolute;
   width: 800px;
@@ -93,6 +254,14 @@ header {
   height: 40px;
   box-sizing: content-box;
   z-index: 101;
+}
+
+.navicon {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 30px;
+  vertical-align: top;
+  cursor: pointer;
 }
 
 .header-logo {
