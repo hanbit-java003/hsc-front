@@ -6,7 +6,7 @@ $('.search-toggle').on('click', function () {
 $('.select-lang').on('click', function () {
     $('.lang-eng').toggle();
 
-    $('.lang-eng').on('click', function (){
+    $('.lang-eng').on('click', function () {
         alert('영어는 나중에 만들겠음')
     });
 });
@@ -58,7 +58,7 @@ $(window).on('scroll', function () {
 });
 relocateGoTopButton();
 
-$('.search-input').on('keyup', function(event) {
+$('.search-input').on('keyup', function (event) {
     if (event.keyCode === 13) {
         var text = $('.search-input').val();
 
@@ -74,30 +74,31 @@ $('.header-btn-member').on('click', function () {
 
     $('body').append(memberLayer);
 
-    $('.ht-member-toggle').on('click', function () {
-        $('.ht-sign-in').toggle();
-        $('.ht-sign-up').toggle();
+    $('.layer-remove').on('click', function () {
+        closeLayer();
     });
 
-    $('.ht-member-layer').animate({
+    $('.member-layer').animate({
         left: '0px'
     }, {
         duration: 500,
         complete: function () { // 애니메이션 끝나면 얘가 불려짐
             $('.overlay-layer').on('click', function () {
-                $('.ht-member-layer').animate({
-                    left: '-333px'
-                }, {
-                    duration: 500,
-                    complete: function () {
-                        $('.ht-member-layer').remove();
-                        $('.overlay-layer').remove();
-                        $('body').css('overflow', 'auto');
-                    }
-                });
+                closeLayer();
             })
         }
     });
 });
 
-
+function closeLayer() {
+    $('.member-layer').animate({
+        left: '-303px'
+    }, {
+        duration: 500,
+        complete: function () {
+            $('.member-layer').remove();
+            $('.overlay-layer').remove();
+            $('body').css('overflow', 'auto');
+        }
+    });
+}
