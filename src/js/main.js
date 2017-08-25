@@ -71,14 +71,6 @@ initCountry(country);
 initContents();
 initUserInfo();
 
-$('.bottom-prev').on('click', function () {
-    console.log('나눌렀니?');
-});
-
-$('.bottom-next').on('click', function () {
-    console.log('나눌렀니?');
-});
-
 $('.country > li').on('click', function () {
     var text = $(this).text();
 

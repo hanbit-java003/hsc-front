@@ -7,7 +7,7 @@ $('.select-lang').on('click', function () {
     $('.lang-eng').toggle();
 
     $('.lang-eng').on('click', function () {
-        alert('영어는 나중에 만들겠음')
+        //
     });
 });
 
@@ -78,6 +78,10 @@ $('.header-btn-member').on('click', function () {
         closeLayer();
     });
 
+    openLayer();
+});
+
+function openLayer() {
     $('.member-layer').animate({
         left: '0px'
     }, {
@@ -88,7 +92,7 @@ $('.header-btn-member').on('click', function () {
             })
         }
     });
-});
+}
 
 function closeLayer() {
     $('.member-layer').animate({
