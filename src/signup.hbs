@@ -12,12 +12,16 @@
             <div class="signup-title">회원 가입</div>
             <div class="signup-desc">여행의 소중한 순간을 볼로에 담아보세요.</div>
         </div>
-        <div class="sigunp-age">
-            <input id="under-age" class="sign-up" type="checkbox">
-            <span class="sign-up">만 14세 미만</span>
-            <input id="over-age" class="sign-up" type="checkbox">
-            <span class="sign-up">만 14세 이상</span>
-        </div>
+        <ul class="sigunp-age">
+            <li>
+                <input id="under-age" class="sign-up" type="checkbox">
+                <span class="sign-up">만 14세 미만</span>
+            </li>
+            <li>
+                <input id="over-age" class="sign-up" type="checkbox">
+                <span class="sign-up">만 14세 이상</span>
+            </li>
+        </ul>
         <ul class="signup-input-wrapper">
             <li class="signup-id-wrapper">
                 <div class="signup-id-title">아이디</div>
@@ -37,22 +41,24 @@
             </li>
         </ul>
         <div class="signup-chkbox-wrapper">
-            <input class="sign-up" type="checkbox">
-            <span class="sign-up">전체 동의</span>
-            <div class="signup-chkbox-sub">
-                <div>
-                    <input class="sign-up" type="checkbox">
-                    <span class="sign-up">YOLO 서비스 이용약관 동의(만 14세 이상) ></span>
-                </div>
-                <div>
-                    <input class="sign-up" type="checkbox">
-                    <span class="sign-up">개인정보 수집/이용 동의 ></span>
-                </div>
-                <div>
-                    <input class="sign-up" type="checkbox">
-                    <span class="sign-up">개인위치정보 수집/이용 동의 ></span>
-                </div>
+            <div class="signup-chkbox-all">
+                <input id="king" class="sign-up" type="checkbox">
+                <span class="sign-up">전체 동의</span>
             </div>
+            <ul class="signup-chkbox-sub">
+                <li>
+                    <input name="ch" class="sign-up" type="checkbox">
+                    <span class="sign-up">YOLO 서비스 이용약관 동의(만 14세 이상) ></span>
+                </li>
+                <li>
+                    <input name="ch" class="sign-up" type="checkbox">
+                    <span class="sign-up">개인정보 수집/이용 동의 ></span>
+                </li>
+                <li>
+                    <input name="ch" class="sign-up" type="checkbox">
+                    <span class="sign-up">개인위치정보 수집/이용 동의 ></span>
+                </li>
+            </ul>
         </div>
         <div class="signup-btn-wrapper">
             <button class="signup-btn">회원 가입</button>
