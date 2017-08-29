@@ -73,7 +73,8 @@ function signUp() {
             pwd: pwd
         },
         success: function (result) {
-            alert('가입 되었습니다.')
+            alert('가입 되었습니다.');
+            location.href = './login.html';
         },
         error: function (jqXHR) {
             alert(jqXHR.responseJSON.message);

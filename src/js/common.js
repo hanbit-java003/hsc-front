@@ -92,6 +92,18 @@ function openLayer() {
             })
         }
     });
+
+    $('.signout-btn').on('click', function () {
+        $.ajax({
+            url: '/api/member/signout',
+            success: function (result) {
+                alert('로그아웃 되었습니다.');
+                closeLayer();
+                $('.header-btn-member').css('display', 'none');
+                location.href = '/';
+            }
+        })
+    });
 }
 
 function closeLayer() {

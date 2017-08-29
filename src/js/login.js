@@ -42,6 +42,7 @@ function signIn() {
         success: function (result) {
             alert(result.id + " 님 반갑습니다.");
             $('.header-btn-member').css('display', 'inline-block');
+            // 페이지 이동해도 버튼 살아있게 하려면 각 페이지마다 물어봐야함..
         },
         error: function (jqXHR) {
             alert(jqXHR.responseJSON.message);
