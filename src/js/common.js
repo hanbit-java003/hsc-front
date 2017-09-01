@@ -1,3 +1,7 @@
+var URLSearchParams = require('url-search-params');
+var params = new URLSearchParams(location.search);
+var userId = params.get('no');
+
 $('.search-toggle').on('click', function () {
     $('.header-search-icon').toggle();
     $('.header-search-bar').toggle('100');
@@ -70,16 +74,29 @@ $('.header-btn-member').on('click', function () {
     $('body').append('<div class="overlay-layer dark-layer"></div>');
     $('body').css('overflow', 'hidden');
 
-    var memberLayer = require('../template/member-menu.hbs');
+    $.ajax({
+        url: '/api/user/' + userId,
+        success: function (result) {
+           userInfo(result);
+        }
+    });
+
+});
+
+function userInfo(model) {
+    model.diary = model.submenu.length;
+    model.country = model.userSub.length;
+
+    var memberLayerTemplate = require('../template/member-menu.hbs');
+    memberLayer = memberLayerTemplate(model);
 
     $('body').append(memberLayer);
+    openLayer();
 
     $('.layer-remove').on('click', function () {
         closeLayer();
     });
-
-    openLayer();
-});
+}
 
 function openLayer() {
     $('.member-layer').animate({
@@ -89,7 +106,7 @@ function openLayer() {
         complete: function () { // 애니메이션 끝나면 얘가 불려짐
             $('.overlay-layer').on('click', function () {
                 closeLayer();
-            })
+            });
         }
     });
 
@@ -102,7 +119,7 @@ function openLayer() {
                 $('.header-btn-member').css('display', 'none');
                 location.href = '/';
             }
-        })
+        });
     });
 }
 

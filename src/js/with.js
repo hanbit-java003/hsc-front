@@ -26,3 +26,5 @@ function getUsers(model) {
 
     $('.with-user-info').append(html);
 }
+
+$('.header-btn-member').css('display', 'inline-block');
