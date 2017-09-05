@@ -64,7 +64,7 @@ function signUp() {
         return;
     }
 
-    $.ajax({
+    common.ajax({
         url: '/api/member/signup',
         method: 'POST',
         data: {
@@ -75,9 +75,6 @@ function signUp() {
         success: function (result) {
             alert('가입 되었습니다.');
             location.href = './login.html';
-        },
-        error: function (jqXHR) {
-            alert(jqXHR.responseJSON.message);
         }
     });
 }

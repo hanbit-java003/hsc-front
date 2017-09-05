@@ -10,7 +10,7 @@ function initUserInfo() {
 
     var template = require('../template/main/userInfo.hbs');
 
-    $.ajax({
+    common.ajax({
         url: '/api/users',
         success: function (result) {
             for (var i = 0; i < 5; i++) {
@@ -57,7 +57,7 @@ function initContents() {
         var sectionRow = 'section-row-' + areas[i];
         $('.main-contents-wrapper').append('<div class="' + sectionRow + '"></div>');
 
-        $.ajax({
+        common.ajax({
             url: '/api/main/' + areas[i],
             success: function (result) {
                 var html = template(result);

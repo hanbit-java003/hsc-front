@@ -8,7 +8,7 @@ var URLSearchParams = require('url-search-params');
 var params = new URLSearchParams(location.search);
 var user = params.get('no');
 
-$.ajax({
+common.ajax({
     url: 'api/user/' + user,
     success: function (result) {
         getUsers(result);

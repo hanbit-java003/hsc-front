@@ -3,6 +3,8 @@ require('../less/login.less');
 
 var common = require('./common');
 
+$('.header-btn-member').css('display', 'none');
+
 $('.find-pwd-btn').on('click', function () {
     location.href = './password.html';
 });
@@ -31,7 +33,7 @@ function signIn() {
         return;
     }
 
-    $.ajax({
+    common.ajax({
         url: '/api/member/signin',
         method: 'POST',
         data: {
@@ -42,12 +44,10 @@ function signIn() {
         success: function (result) {
             alert(result.id + " 님 반갑습니다.");
             var userId = result.id;
-            $('.header-btn-member').css('display', 'inline-block');
             // 페이지 이동해도 버튼 살아있게 하려면 각 페이지마다 물어봐야함..
+            //$('.header-btn-member').css('display', 'inline-block');
+
             location.href = './with.html?no=' + userId;
-        },
-        error: function (jqXHR) {
-            alert(jqXHR.responseJSON.message);
         }
-    })
+    });
 }
