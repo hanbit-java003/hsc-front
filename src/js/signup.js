@@ -3,6 +3,8 @@ require('../less/signup.less');
 
 var common = require('./common');
 
+$('.header-btn-member').css('display', 'none');
+
 $('.signup-option > div:last-child').on('click', function () {
     location.href = './login.html';
 });
