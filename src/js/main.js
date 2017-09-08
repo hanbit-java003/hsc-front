@@ -29,7 +29,7 @@ function initUsers() {
 
                 $('.user-info').on('click', function () {
                     var userId = $(this).attr('user-name');
-                    location.href = './with.html?no=' + userId;
+                    location.href = './user-info.html?no=' + userId;
                 });
             }
         });

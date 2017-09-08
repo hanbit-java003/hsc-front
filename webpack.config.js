@@ -12,8 +12,8 @@ const pages = [{
     html: 'index',
     script: 'main',
 }, {
-    html: 'with',
-    script: 'with',
+    html: 'user-info',
+    script: 'user-info',
 }, {
     html: 'search',
     script: 'search',

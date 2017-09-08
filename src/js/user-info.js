@@ -1,5 +1,5 @@
 require('bootstrap');
-require('../less/with.less');
+require('../less/user-info.less');
 
 var common = require('./common');
 var main = require('./main');
@@ -16,7 +16,7 @@ common.ajax({
 });
 
 function getUsers(model) {
-    $('.with-user-info').empty();
+    $('.ha-user-info').empty();
 
     model.diary = model.submenu.length;
     model.country = model.userSub.length;
@@ -24,7 +24,7 @@ function getUsers(model) {
     var template = require('../template/user-page.hbs');
     var html = template(model);
 
-    $('.with-user-info').append(html);
+    $('.ha-user-info').append(html);
 }
 
 $('.header-btn-member').css('display', 'inline-block');
