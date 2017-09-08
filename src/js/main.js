@@ -5,33 +5,35 @@ var common = require('./common');
 
 var country = require('./model/country');
 
-function initUserInfo() {
+common.ajax({
+    url: '/api/users',
+    success: function () {
+        initUsers();
+    }
+});
+
+function initUsers() {
     $('.bottom-user').empty();
 
     var template = require('../template/main/userInfo.hbs');
 
-    common.ajax({
-        url: '/api/users',
-        success: function (result) {
-            for (var i = 0; i < 5; i++) {
-                var users = 'users-row-' + (i + 1);
-                $('.bottom-user').append('<div class="bottom-user-row ' + users + '"></div>');
+    for (var i = 0; i < 5; i++) {
+        var users = 'users-row-' + (i + 1);
+        $('.bottom-user').append('<div class="bottom-user-row ' + users + '"></div>');
 
-                $.ajax({
-                    url: '/api/user/' + (i + 1),
-                    success: function (result) {
-                        var html = template(result);
-                        $('.users-row-' + result.userNo).html(html);
+        common.ajax({
+            url: '/api/user/' + (i + 1),
+            success: function (result) {
+                var html = template(result);
+                $('.users-row-' + result.userNo).html(html);
 
-                        $('.user-info').on('click', function () {
-                            var userId = $(this).attr('user-name');
-                            location.href = './with.html?no=' + userId;
-                        });
-                    }
+                $('.user-info').on('click', function () {
+                    var userId = $(this).attr('user-name');
+                    location.href = './with.html?no=' + userId;
                 });
             }
-        }
-    });
+        });
+    }
 }
 
 function initCountry(country) {
@@ -69,7 +71,6 @@ function initContents() {
 
 initCountry(country);
 initContents();
-initUserInfo();
 
 $('.country > li').on('click', function () {
     var text = $(this).text();
