@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login - 욜로</title>
+</head>
+<body>
+{{> template/header }}
+<section class="setting-section">
+    <div class="setting-profile">
+        <div class="setting-img" style="background-image: url(./img/user/gungye.jpg)">
+            <div class="setting-camera"><i class="fa fa-camera"></i></div>
+        </div>
+        <div class="setting-id">궁예</div>
+        <div class="setting-email">goong@naver.com</div>
+    </div>
+    <ul class="setting-input">
+        <li class="setting-name">
+            <div>표시 이름</div>
+            <input id="setting-name" type="text" placeholder="표시될 이름을 입력해주세요">
+        </li>
+        <li class="setting-text">
+            <div>본인소개</div>
+            <input id="setting-text" type="text" placeholder="간단한 자기소개를 적어주세요">
+        </li>
+    </ul>
+    <button class="setting-btn">저장하기</button>
+</section>
+{{> template/footer }}
+</body>
+</html>

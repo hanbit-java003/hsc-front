@@ -10,22 +10,25 @@ const port = {
 
 const pages = [{
     html: 'index',
-    script: 'main',
+    script: 'main'
 }, {
     html: 'user-info',
-    script: 'user-info',
+    script: 'user-info'
 }, {
     html: 'search',
-    script: 'search',
+    script: 'search'
 }, {
     html: 'signup',
-    script: 'signup',
+    script: 'signup'
 }, {
     html: 'login',
-    script: 'login',
+    script: 'login'
 }, {
     html: 'password',
-    script: 'password',
+    script: 'password'
+}, {
+    html: 'setting',
+    script: 'setting'
 }, {
     html: 'admin/index',
     script: 'admin/main'
@@ -35,12 +38,6 @@ const pages = [{
 }, {
     html: 'admin/area-contents',
     script: 'admin/area-contents'
-}, {
-    html: 'admin/user-group',
-    script: 'admin/user-group'
-}, {
-    html: 'admin/user-contents',
-    script: 'admin/user-contents'
 }];
 
 module.exports = {
