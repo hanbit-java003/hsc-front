@@ -1,15 +1,14 @@
 require('bootstrap');
-require('../less/user-info.less');
+require('../less/user.less');
 
 var common = require('./common');
-var main = require('./main');
 
 var URLSearchParams = require('url-search-params');
 var params = new URLSearchParams(location.search);
-var user = params.get('no');
+var id = params.get('id');
 
 common.ajax({
-    url: 'api/user/' + user,
+    url: 'api/member/' + id,
     success: function (result) {
         getUsers(result);
     }
@@ -18,8 +17,8 @@ common.ajax({
 function getUsers(model) {
     $('.ha-user-info').empty();
 
-    model.diary = model.submenu.length;
-    model.country = model.userSub.length;
+    //model.diary = model.submenu.length;
+    //model.country = model.userSub.length;
 
     var template = require('../template/user-page.hbs');
     var html = template(model);

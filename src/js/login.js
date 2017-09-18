@@ -16,9 +16,9 @@ $('.signin-btn').on('click', function () {
 });
 
 function signIn() {
+    var id = $('#signin-id').val().trim();
     var email = $('#signin-email').val().trim();
     var pwd = $('#signin-pwd').val().trim();
-    var id = $('#signin-id').val().trim();
 
     if (!email) {
         alert('이메일을 입력하세요.');
@@ -35,17 +35,16 @@ function signIn() {
         url: '/api/member/signin',
         method: 'POST',
         data: {
+            id: id,
             email: email,
-            pwd: pwd,
-            id: id
+            pwd: pwd
         },
         success: function (result) {
             alert(result.id + " 님 반갑습니다.");
-            var userId = result.id;
-            // 페이지 이동해도 버튼 살아있게 하려면 각 페이지마다 물어봐야함..
+
             //$('.header-btn-member').css('display', 'inline-block');
 
-            location.href = './user-info.html?no=' + userId;
+            location.href = './user.html?id=' + result.id;
         }
     });
 }

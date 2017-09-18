@@ -70,7 +70,8 @@ function signUp() {
         data: {
             id: id,
             email: email,
-            pwd: pwd
+            pwd: pwd,
+            domain: id + ".withyolo.com"
         },
         success: function (result) {
             alert('가입 되었습니다.');
