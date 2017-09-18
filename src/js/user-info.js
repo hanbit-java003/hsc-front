@@ -26,5 +26,3 @@ function getUsers(model) {
 
     $('.ha-user-info').append(html);
 }
-
-$('.header-btn-member').css('display', 'inline-block');

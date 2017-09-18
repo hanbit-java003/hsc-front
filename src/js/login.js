@@ -3,8 +3,6 @@ require('../less/login.less');
 
 var common = require('./common');
 
-$('.header-btn-member').css('display', 'none');
-
 $('.find-pwd-btn').on('click', function () {
     location.href = './password.html';
 });
@@ -47,7 +45,7 @@ function signIn() {
             // 페이지 이동해도 버튼 살아있게 하려면 각 페이지마다 물어봐야함..
             //$('.header-btn-member').css('display', 'inline-block');
 
-            location.href = './with.html?no=' + userId;
+            location.href = './user-info.html?no=' + userId;
         }
     });
 }

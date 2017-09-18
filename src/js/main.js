@@ -53,14 +53,14 @@ function initContents() {
 
     var template = require('../template/main/contents.hbs');
 
-    var areas = ['france', 'hungary', 'jeju'];
+    var areas = ['jeju', 'hungary', 'saipan'];
 
     for (var i = 0; i < areas.length; i++) {
         var sectionRow = 'section-row-' + areas[i];
         $('.main-contents-wrapper').append('<div class="' + sectionRow + '"></div>');
 
         common.ajax({
-            url: '/api/main/' + areas[i],
+            url: '/api/country/' + areas[i],
             success: function (result) {
                 var html = template(result);
                 $('.section-row-' + result.id).html(html);

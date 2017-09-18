@@ -3,23 +3,49 @@ require('../less/setting.less');
 
 var common = require('./common');
 
-$('#setting-img-select').on('click', function () {
-    $('#setting-img-input').click();
+common.ajax({
+    url: '/api/member/get',
+    succcess: function (result) {
+        if (!result.signedIn) {
+            alert('로그인이 필요한 페이지입니다.');
+            location.href = '/';
+        }
+
+        getMemberDetail();
+    }
 });
 
-$('#setting-img-input').on('change', function () {
-    if (this.files.length === 0) {
-        return;
-    }
+function getMemberDetail() {
+    common.ajax({
+        url: '/api/member/detail',
+        success: function (result) {
+            init(result);
+        }
+    });
+}
 
-    var file = this.files[0];
-    var fileReader = new FileReader();
+function init(member) {
+    console.log(member);
 
-    fileReader.addEventListener('load', function (event) {
-        var preview = event.target.result;
-
-        $('.setting-img').css('background-image', 'url(' + preview + ')');
+    $('#setting-img-select').on('click', function () {
+        $('#setting-img-input').click();
     });
 
-    fileReader.readAsDataURL(file);
-});
+    $('#setting-img-input').on('change', function () {
+        if (this.files.length === 0) {
+            return;
+        }
+
+        var file = this.files[0];
+        var fileReader = new FileReader();
+
+        fileReader.addEventListener('load', function (event) {
+            var preview = event.target.result;
+
+            $('.setting-img').css('background-image', 'url(' + preview + ')');
+        });
+
+        fileReader.readAsDataURL(file);
+    });
+}
+

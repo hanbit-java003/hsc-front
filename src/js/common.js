@@ -7,9 +7,9 @@ function ajax(options) {
         options.error = function (jqXHR) {
             var errorCode = jqXHR.responseJSON.errorCode;
 
-            if (errorCode === 403) {
+            /*if (errorCode === 403) {
                 location.href = '../login.html';
-            }
+            }*/
 
             alert(jqXHR.responseJSON.message);
         };
@@ -39,18 +39,18 @@ $('.search-input').on('keyup', function (event) {
     }
 });
 
-$('.header-btn-member').on('click', function () {
+/*$('.header-btn-member').on('click', function () {
     $('body').append('<div class="overlay-layer dark-layer"></div>');
     $('body').css('overflow', 'hidden');
 
     ajax({
         url: '/api/user/' + userId,
         success: function (result) {
-            userInfo(result);
+            //userInfo(result);
         }
     });
 
-});
+});*/
 
 function userInfo(model) {
     model.diary = model.submenu.length;
@@ -62,6 +62,10 @@ function userInfo(model) {
     $('body').append(memberLayer);
 
     openLayer();
+
+    $('.layer-btn').on('click', function () {
+       location.href = './setting.html?no=' + userId;
+    });
 
     $('.layer-remove').on('click', function () {
         closeLayer();
@@ -80,7 +84,7 @@ function openLayer() {
         }
     });
 
-    $('.signout-btn').on('click', function () {
+    /*$('.signout-btn').on('click', function () {
         ajax({
             url: '/api/member/signout',
             success: function (result) {
@@ -90,7 +94,7 @@ function openLayer() {
                 location.href = '/';
             }
         });
-    });
+    });*/
 }
 
 function closeLayer() {
@@ -121,6 +125,7 @@ $('.go-top-btn').on('click', function () {
     return false;
 });
 
+// 위로가기 버튼
 function relocateGoTopButton() {
     var scrollTop = $(window).scrollTop();
     var footerHeight = $('footer').outerHeight();
