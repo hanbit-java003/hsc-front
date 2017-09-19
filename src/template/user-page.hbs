@@ -13,11 +13,11 @@
         <ul class="ha-user-travel">
             <li class="ha-user-travel-diary">
                 <i class="fa fa-book"></i>
-                여행기 <span>{{diary}}</span>
+                여행기 <span>{{diaryCount}}</span>
             </li>
             <li class="ha-user-travel-country">
                 <i class="fa fa-map-marker"></i>
-                여행국가 <span>{{country}}</span>
+                여행국가 <span>{{countryCount}}</span>
             </li>
             <li class="ha-user-travel-flag">
                 <ul class="ha-user-travel-country-flag">
@@ -30,10 +30,10 @@
     </div>
 </div>
 <ul class="ha-user-contents">
-    {{~#each submenu~}}
+{{#each diary~}}
     <li>
         <div class="user-contents-img">
-            <img src="{{img}}">
+            <img src="{{photo}}">
         </div>
         <div class="user-contents-desc">
             <div class="user-contents-title">
@@ -45,14 +45,14 @@
         </div>
         <div class="user-contents-userinfo">
             <div class="ha-user-img-container">
-                <img class="editor-thumbnail" src="{{usersImg}}">
+                <img class="editor-thumbnail" src="{{../detail.img}}">
             </div>
-            <div class="user-contents-userid">{{userId}}</div>
+            <div class="user-contents-userid">{{../detail.name}}</div>
             <div class="user-contents-like">
                 <i class="like-btn fa fa-heart-o"></i>
-                <div>{{likeCount}}</div>
+                <div>{{rate}}</div>
             </div>
         </div>
     </li>
-    {{~/each~}}
+{{~/each}}
 </ul>

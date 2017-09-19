@@ -17,8 +17,8 @@ common.ajax({
 function getUsers(model) {
     $('.ha-user-info').empty();
 
-    //model.diary = model.submenu.length;
-    //model.country = model.userSub.length;
+    model.diaryCount = model.diary.length;
+    model.countryCount = model.diary.length;
 
     var template = require('../template/user-page.hbs');
     var html = template(model);
