@@ -1,9 +1,9 @@
-<li class="user-info" user-name="{{userNo}}">
+<li class="user-info" user-name="{{id}}">
     <div class="user-img"
-         style="background-image: url({{img}})">
+         style="background-image: url({{detail.img}})">
     </div>
-    <div class="user-id">{{userId}}</div>
-    <div class="user-text">{{text}}</div>
+    <div class="user-id">{{id}}</div>
+    <div class="user-text">{{detail.comment}}</div>
     <ul class="user-travel">
         {{#each userSub}}
             <li class="user-travel-icon"

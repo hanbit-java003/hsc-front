@@ -4,14 +4,14 @@ require('../less/search.less');
 var common = require('./common');
 
 $.ajax({
-    url: '/api/main/result',
+    url: '/api/member/members',
     success: function (result) {
         //initSearchContents(result);
     }
 });
 
 $.ajax({
-    url: '/api/users',
+    url: '/api/member/members',
     success: function (result) {
         //initSearchUsers(result);
     }

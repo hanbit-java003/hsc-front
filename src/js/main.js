@@ -2,37 +2,23 @@ require('bootstrap');
 require('../less/main.less');
 
 var common = require('./common');
-
 var country = require('./model/country');
 
 common.ajax({
-    url: '/api/users',
-    success: function () {
-        initUsers();
+    url: '/api/member/members',
+    success: function (result) {
+        initUsers(result);
     }
 });
 
-function initUsers() {
+function initUsers(members) {
     $('.bottom-user').empty();
 
     var template = require('../template/main/userInfo.hbs');
 
-    for (var i = 0; i < 5; i++) {
-        var users = 'users-row-' + (i + 1);
-        $('.bottom-user').append('<div class="bottom-user-row ' + users + '"></div>');
-
-        common.ajax({
-            url: '/api/user/' + (i + 1),
-            success: function (result) {
-                var html = template(result);
-                $('.users-row-' + result.userNo).html(html);
-
-                $('.user-info').on('click', function () {
-                    var userId = $(this).attr('user-name');
-                    location.href = './user-info.html?no=' + userId;
-                });
-            }
-        });
+    for (var i = 0; i < members.length; i++) {
+        var html = template(members[i]);
+        $('.bottom-user').append(html);
     }
 }
 
