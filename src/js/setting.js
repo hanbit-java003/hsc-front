@@ -25,7 +25,9 @@ function getMemberDetail() {
 }
 
 function init(member) {
-    console.log(member);
+    $('.setting-img').css('background-image', 'url(' + member.detail.img + ')');
+    $('.setting-id').html(member.detail.name);
+    $('.setting-email').html(member.email);
 
     $('#setting-img-select').on('click', function () {
         $('#setting-img-input').click();

@@ -5,19 +5,35 @@ var common = require('./common');
 
 $.ajax({
     url: '/api/main/result',
-    success: function(result) {
-        initSearchContents(result);
+    success: function (result) {
+        //initSearchContents(result);
     }
 });
 
 $.ajax({
     url: '/api/users',
-    success: function(result) {
-        initSearchUsers(result);
+    success: function (result) {
+        //initSearchUsers(result);
     }
 });
 
-$('.search-tab-btns > div').on('click', function() {
+function searchInit() {
+    // 검색 버튼
+    $('.search-toggle').on('click', function () {
+        $('.header-search-icon').toggle();
+        $('.header-search-bar').toggle('100');
+    });
+
+    $('.search-input').on('keyup', function (event) {
+        if (event.keyCode === 13) {
+            var text = $('.search-input').val();
+            alert(text + ' 를 검색하시려구??')
+            //location.href = './search.html?' + text;
+        }
+    });
+}
+
+$('.search-tab-btns > div').on('click', function () {
     if ($(this).hasClass('active')) {
         return;
     }
@@ -42,7 +58,7 @@ function initSearchContents(contents) {
     var url = location.href;
     var url2 = url.slice(url.indexOf('?') + 1);
 
-    for (var i=0; i<contents.length; i++) {
+    for (var i = 0; i < contents.length; i++) {
         var html = template(contents[i]);
         $('.search-contents-tab').append(html);
     }
@@ -58,8 +74,12 @@ function initSearchUsers(users) {
 
     var template = require('../template/search/search-users.hbs');
 
-    for (var i=0; i<users.length; i++) {
+    for (var i = 0; i < users.length; i++) {
         var html = template(users[i]);
         $('.search-users-tab').append(html);
     }
 }
+
+module.exports = {
+    searchInit: searchInit
+};
